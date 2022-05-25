@@ -10,6 +10,8 @@ const string path = "../" + DBNAME + "/";
 
 using namespace dbmsLib5;
 
+
+
 namespace practice {
 	class Student {
 	private:
@@ -57,6 +59,9 @@ namespace practice {
 		void PrintGroup();
 
 	};
+
+	vector<practice::Group> getGroups(DBTableSet5& DB);
+	string V17(DBTableSet5& DB);
 }
 
 #endif // !PRACTICE_H

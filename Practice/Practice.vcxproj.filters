@@ -37,6 +37,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\..\Labs_2semestr\Labs_2semestr_CPP\DBMSLIB\Debug\dbmslib5.lib" />
+    <Library Include="..\..\Labs_2semestr\Labs_2semestr_CPP\DBMSLIB\x64\Debug\dbmslib5.lib" />
   </ItemGroup>
 </Project>
