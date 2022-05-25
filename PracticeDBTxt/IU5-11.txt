@@ -1,0 +1,22 @@
+IU5-11|IU5-11
+ID|Int32|6|Name|String|15|math|Int32|8|nach gem|Int32|8|prog|Int32|6|ptp|Int32|6
+        1|          Akhmadulin|    4|       4|    3|    3|
+        2|             Ashurov|    5|       5|    5|    5|
+        3|             Gapeeva|    5|       5|    5|    5|
+        4|             Izibaev|    4|       4|    5|    5|
+        5|             Koibaev|    5|       5|    5|    5|
+        6|        Kolomiychuck|    5|       5|    5|    4|
+        7|           Koretskiy|    4|       5|    5|    5|
+        8|              Kotova|    4|       5|    4|    4|
+        9|           Kurzanova|    4|       4|    5|    5|
+        10|            Makridin|    3|       4|    3|    3|
+        11|            Mikhalev|    4|       4|    5|    5|
+        12|              Orazov|    5|       5|    5|    5|
+        13|             Sadirov|    4|       4|    5|    4|
+        14|          Sarckisyan|    4|       5|    5|    5|
+        15|               Sigal|    3|       4|    4|    4|
+        16|       Slepchenckova|    5|       5|    5|    4|
+        17|           Stroganov|    4|       4|    5|    5|
+        18|       Tolstolutskiy|    5|       4|    5|    4|
+        19|           Uspenskiy|    4|       4|    5|    4|
+        20|              Hohlov|    3|       4|    5|    5|

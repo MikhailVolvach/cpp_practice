@@ -1,0 +1,21 @@
+IU5-12|IU5-12
+ID|Int32|6|Name|String|15|math|Int32|8|nach gem|Int32|8|prog|Int32|6|ptp|Int32|6
+1|Altsybeeva|   4|	4|	5|	5
+2|Arzamastsev|  5|	5|	5|	5
+3|Beketov|  5|	5|	5|	5
+4|Vaskin|   4|	4|	3|	4
+5|Volvach|  5|	4|	5|	5
+6|Gracheva| 5|	5|	4|	5
+7|Davidyan| 4|	3|	3|	4
+8|Efimov|   3|	3|	3|	3
+9|Kazitsin| 4|	4|	4|	3
+10|Kirillova|   5|	4|	5|	5
+11|KuzminA| 5|	5|	5|	5
+12|KuzminY| 4|	5|	4|	4
+13|Lyalko|  4|	4|	4|	4
+14|Nesterenko|  5|	5|	4|	5
+15|Popova|  5|	4|	4|	4
+16|Pustovalov|  4|	5|	4|	5
+17|Secretov|    4|	4|	3|	3
+18|Semchonok|   4|	4|	5|	5
+19|Schepetov|   4|	5|	3|	3

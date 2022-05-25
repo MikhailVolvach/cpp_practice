@@ -1,0 +1,22 @@
+IU5-13|IU5-13
+ID|Int32|6|Name|String|15|math|Int32|8|nach gem|Int32|8|prog|Int32|6|ptp|Int32|6
+1|Baluk |5|   5|    5|    5
+2|Valova |5|   5|    4|    5
+3|Gorkunov |5|   5|    5|    5
+4|Jurmilov |4|   5|    5|    5
+5|Ivanchenko |5|   5|    5|    5
+6|Komarov |4|   4|    4|    5
+7|Kuznetsov |4|   5|    5|    5
+8|Lebedeva |5|   5|    5|    5
+9|Lobanov |5|   5|    4|    5
+10|Lukyanov |4|   4|    4|    5
+11|Permyakov |4|   5|    5|    5
+12|Polyakov |4|   5|    5|    5
+13|Popov |4|   4|    5|    4
+14|Rasskazov |5|   4|    5|    5
+15|Pibin |4|   5|    4|    5
+16|Sargsyan |4|   4|    3|   5
+17|Skiba |4|   4|    5|    5
+18|Sokolov |4|   4|    4|    4
+19|Terentieva |4|   5|    4|    4
+20|Tsuprikov |4|   3|   4|    4
