@@ -20,9 +20,9 @@ namespace practice {
 		map<string, size_t> marks_;
 	public:
 		Student() { 
-			this->studentId_ = 0; this->name_ = ""; this->marks_.insert(pair<string, size_t>()); 
+			/*this->studentId_ = 0; this->name_ = ""; this->marks_.insert(pair<string, size_t>());*/ 
 		}
-		Student(size_t id, string name);
+		//Student(size_t id, string name);
 		Student(size_t id, string name, map<string, size_t> marks);
 
 		string GetName();
@@ -44,7 +44,6 @@ namespace practice {
 		size_t amountOfStudents_;
 	public:
 		Group() {}
-		Group(string groupName);
 		Group(string groupName, vector<Student> studentsList, size_t amountOfStudents);
 
 		string GetGroupName();
@@ -53,7 +52,7 @@ namespace practice {
 
 		void SetGroupName(string groupName);
 		void SetStudentsList(vector<Student> studentsList);
-		void SetAmountOfStudents(size_t amountOfStudents);
+		//void SetAmountOfStudents(size_t amountOfStudents);
 
 		void AddStudent(Student Stud);
 		void PrintGroup();

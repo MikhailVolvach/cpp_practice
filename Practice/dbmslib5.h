@@ -17,10 +17,10 @@ namespace dbmsLib5
 {
 	enum Errors {
 		EMPTY_ARGUMENT,
+		EMPTY_CLASS_FIELD,
 		INCORRECT_INPUT,
-		EMPRTY_CLASS_FIELD,
+		NOT_EMPTY_CLASS,
 		NOTHING_TO_PRINT,
-		NOT_EMPTY_CLASS
 	};
 
 	static const int arrDays[13] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };

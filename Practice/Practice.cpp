@@ -1,25 +1,11 @@
 #include "practice.h"
 
 namespace practice {
-	Student::Student(size_t id, string name) {
-		if (!(this->studentId_ || this->name_.size()))
-		{
-			exit(NOT_EMPTY_CLASS);
-		}
-		if (name.size() > 15)
-		{
-			exit(INCORRECT_INPUT);
-		}
-		this->studentId_ = id;
-		this->name_ = name;
-	}
 	Student::Student(size_t id, string name, map<string, size_t> marks) {
-		if (!(this->studentId_ || this->name_.size() || this->marks_.size()))
+		if (name.size() > 15 || !name.size())
 		{
-			exit(NOT_EMPTY_CLASS);
-		}
-		if (name.size() > 15)
-		{
+			cout << "Error: Incorrect name size" << endl;
+			cout << "Student::Student(size_t id, string name, map<string, size_t> marks)" << endl;
 			exit(INCORRECT_INPUT);
 		}
 		this->studentId_ = id;
@@ -31,7 +17,7 @@ namespace practice {
 		if (!this->name_.size())
 		{
 			cout << "Student::GetName()" << endl;
-			exit(EMPRTY_CLASS_FIELD);
+			exit(EMPTY_CLASS_FIELD);
 		}
 		return this->name_;
 	}
@@ -39,7 +25,7 @@ namespace practice {
 		if (!this->studentId_)
 		{
 			cout << "Student::GetId()" << endl;
-			exit(EMPRTY_CLASS_FIELD);
+			exit(EMPTY_CLASS_FIELD);
 		}
 		return this->studentId_;
 	}
@@ -47,7 +33,7 @@ namespace practice {
 		if (!this->marks_.size())
 		{
 			cout << "Student::GetMarks()" << endl;
-			exit(EMPRTY_CLASS_FIELD);
+			exit(EMPTY_CLASS_FIELD);
 		}
 		return this->marks_;
 	}
@@ -64,6 +50,11 @@ namespace practice {
 		this->studentId_ = id;
 	}
 	void Student::SetMarks(map<string, size_t> marks) {
+		if (!marks.size())
+		{
+			cout << "Student::SetMarks(map<string, size_t> marks)" << endl;
+			exit(INCORRECT_INPUT);
+		}
 		for (pair<string, size_t> marksIter : marks)
 		{
 			if (marksIter.second > 5 || marksIter.second < 2)
@@ -76,7 +67,7 @@ namespace practice {
 	}
 
 	void Student::AddMark(pair<string, size_t> mark) {
-		if (mark.second < 2 || mark.second > 5)
+		if (mark.second < 2 || mark.second > 5 || !mark.first.size())
 		{
 			cout << "Student::AddMark(pair<string, size_t> mark)" << endl;
 			exit(INCORRECT_INPUT);
@@ -87,7 +78,7 @@ namespace practice {
 	{
 		if (!(this->studentId_ || this->name_.size() || this->marks_.size())) {
 			cout << "Student::PrintStudentInfo()" << endl;
-			exit(EMPRTY_CLASS_FIELD);
+			exit(EMPTY_CLASS_FIELD);
 		}
 		cout << "-----------------" << endl;
 		cout << "ID : " << this->GetId() << endl;
@@ -97,24 +88,9 @@ namespace practice {
 			cout << "\t" << marksIter.first << " : " << marksIter.second << endl;
 		}
 	}
-	
-	Group::Group(string groupName)
-	{
-		if (!this->groupName_.size())
-		{
-			cout << "Group::Group(string groupName)" << endl;
-			exit(EMPRTY_CLASS_FIELD);
-		}
-		this->groupName_ = groupName;
-	}
 
 	Group::Group(string groupName, vector<Student> studentsList, size_t amountOfStudents)
 	{
-		if (!(this->groupName_.size() || this->amountOfStudents_ || this->studentsList_.size()))
-		{
-			cout << "Group::Group(string groupName, vector<Student> studentsList, size_t amountOfStudents)" << endl;
-			exit(EMPRTY_CLASS_FIELD);
-		}
 		this->groupName_ = groupName;
 		this->amountOfStudents_ = amountOfStudents;
 		this->studentsList_ = studentsList;
@@ -125,7 +101,7 @@ namespace practice {
 		if (!this->groupName_.size())
 		{
 			cout << "Group::GetGroupName()" << endl;
-			exit(EMPRTY_CLASS_FIELD);
+			exit(EMPTY_CLASS_FIELD);
 		}
 		return this->groupName_;
 	}
@@ -135,50 +111,46 @@ namespace practice {
 		if (!this->studentsList_.size())
 		{
 			cout << "Group::GetStudentsList()" << endl;
-			exit(EMPRTY_CLASS_FIELD);
+			exit(EMPTY_CLASS_FIELD);
 		}
 		return this->studentsList_;
 	}
 
 	size_t Group::GetAmountOfStudents()
 	{
-		if (!this->amountOfStudents_)
-		{
-			cout << "Group::GetAmountOfStudents()" << endl;
-			exit(EMPRTY_CLASS_FIELD);
-		}
 		return this->amountOfStudents_;
 	}
 
 	void Group::SetGroupName(string groupName)
 	{
-		if (this->groupName_.size())
+		if (!groupName.size())
 		{
 			cout << "Group::SetGroupName(string groupName)" << endl;
-			exit(NOT_EMPTY_CLASS);
+			exit(INCORRECT_INPUT);
 		}
 		this->groupName_ = groupName;
 	}
 
 	void Group::SetStudentsList(vector<Student> studentsList)
 	{
-		if (this->studentsList_.size())
+		if (!studentsList.size())
 		{
 			cout << "Group::SetStudentsList(vector<Student> studentsList)" << endl;
-			exit(NOT_EMPTY_CLASS);
+			exit(INCORRECT_INPUT);
 		}
 		this->studentsList_ = studentsList;
+		this->amountOfStudents_ = studentsList.size();
 	}
 
-	void Group::SetAmountOfStudents(size_t amountOfStudents)
+	/*void Group::SetAmountOfStudents(size_t amountOfStudents)
 	{
-		if (this->amountOfStudents_)
+		if (!amountOfStudents)
 		{
 			cout << "Group::SetAmountOfStudents(size_t amountOfStudents)" << endl;
-			exit(NOT_EMPTY_CLASS);
+			exit(INCORRECT_INPUT);
 		}
 		this->amountOfStudents_ = amountOfStudents;
-	}
+	}*/
 
 	void Group::AddStudent(Student Stud)
 	{
@@ -191,6 +163,7 @@ namespace practice {
 			}
 		}
 		this->studentsList_.push_back(Stud);
+		this->amountOfStudents_++;
 	}
 
 	void Group::PrintGroup()
@@ -208,14 +181,13 @@ namespace practice {
 	{
 		map<string, DBTable5*> tables = DB.GetDB();
 
-		const int NUMBER_OF_GROUPS = tables.size();
 		vector<practice::Group> Groups;
 
 		for (map<string, DBTable5*>::iterator tableIter = tables.begin(); tableIter != tables.end(); ++tableIter)
 		{
 			practice::Group group;
 			group.SetGroupName(tableIter->first);
-			group.SetAmountOfStudents(tableIter->second->GetSize());
+			//group.SetAmountOfStudents(tableIter->second->GetSize());
 			vector<Row> tableData = tableIter->second->GetData();
 			for (Row row : tableData)
 			{
