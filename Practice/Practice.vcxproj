@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Create_Students-list_file.cpp" />
     <ClCompile Include="Practice.cpp" />
     <ClCompile Include="Test.cpp" />
     <ClCompile Include="v16.cpp" />
@@ -150,6 +151,9 @@
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\..\Labs_2semestr\Labs_2semestr_CPP\DBMSLIB\x64\Debug\dbmslib5.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\PracticeDBTxt\Students-list.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

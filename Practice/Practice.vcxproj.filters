@@ -27,6 +27,9 @@
     <ClCompile Include="Practice.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Create_Students-list_file.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dbmslib5.h">
@@ -38,5 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\..\Labs_2semestr\Labs_2semestr_CPP\DBMSLIB\x64\Debug\dbmslib5.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\PracticeDBTxt\Students-list.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
 </Project>

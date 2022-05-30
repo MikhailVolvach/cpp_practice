@@ -10,7 +10,7 @@ const string path = "../" + DBNAME + "/";
 
 using namespace dbmsLib5;
 
-
+void createStudentsListFile(DBTableSet5& DB);
 
 namespace practice {
 	class Student {

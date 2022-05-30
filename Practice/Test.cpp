@@ -1,6 +1,9 @@
 ﻿#include <iostream>
 #include "practice.h"
 
+//#include "Create_Students-list_file.cpp"
+
+
 //void testing() {
 //	//DBTableTxt5 db;
 //	//db.ReadDBTable5(path + "IU5-11.txt");
@@ -66,12 +69,13 @@ int main()
 
 	DBTableSet5 DB(DBNAME);
 	DB.ReadDB5();
-	//vector<practice::Group> groups = practice::getGroups(DB);
+	vector<practice::Group> groups = practice::getGroups(DB);
 
 	//practice::V17(DB);
 
 	//StudentMethodsTest();
-	GroupsMethodsTest();
+	//GroupsMethodsTest();
+	//createStudentsListFile(DB);
 
 	system("pause");
 	return 0;
