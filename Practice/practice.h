@@ -17,24 +17,28 @@ void createStudentsListFile(DBTableSet5& DB);
 namespace practice {
 	class Student {
 	private:
-		size_t studentId_;
-		string name_;
-		map<string, size_t> marks_;
+		string				groupName_;
+		map<string, size_t>	marks_;
+		string				name_;
+		string				studentId_;
 	public:
 		Student() { 
 			/*this->studentId_ = 0; this->name_ = ""; this->marks_.insert(pair<string, size_t>());*/ 
 		}
 		//Student(size_t id, string name);
-		Student(size_t id, string name);
-		Student(size_t id, string name, map<string, size_t> marks);
+		Student(string groupName, string name, string id);
+		Student(string groupName, map<string, size_t> marks, string name, string id);
 
-		string GetName();
-		size_t GetId();
+		string				GetGroupName();
+		string				GetName();
+		string				GetId();
 		map<string, size_t> GetMarks();
 
-		void SetName(string name);
-		void SetId(size_t id);
+		void SetGroupName(string groupName);
 		void SetMarks(map<string, size_t> marks);
+		void SetName(string name);
+		void SetId(string id);
+	
 
 		void AddMark(pair<string, size_t> mark);
 		void PrintStudentInfo();
@@ -47,7 +51,8 @@ namespace practice {
 		size_t amountOfStudents_;
 	public:
 		Group() {}
-		Group(string groupName, vector<Student> studentsList, size_t amountOfStudents);
+		Group(string groupName);
+		Group(string groupName, vector<Student> studentsList);
 
 		string GetGroupName();
 		vector<Student> GetStudentsList();
