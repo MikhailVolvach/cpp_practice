@@ -3,10 +3,12 @@
 #include "dbmslib5.h"
 #include <iostream>
 
-const int SCREEN_WIDTH = 80;
-const int NAME_FIELD_LENGTH = 15;
 const string DBNAME = "PracticeDBtxt";
-const string path = "../" + DBNAME + "/";
+const int NAME_FIELD_LENGTH = 15;
+const int SCREEN_WIDTH = 80;
+const string PATH = "../" + DBNAME + "/";
+const string RESULTS_LIST = "Results-List";
+const string STUDENTS_LIST = "Students-list";
 
 using namespace dbmsLib5;
 
@@ -23,6 +25,7 @@ namespace practice {
 			/*this->studentId_ = 0; this->name_ = ""; this->marks_.insert(pair<string, size_t>());*/ 
 		}
 		//Student(size_t id, string name);
+		Student(size_t id, string name);
 		Student(size_t id, string name, map<string, size_t> marks);
 
 		string GetName();
@@ -59,6 +62,7 @@ namespace practice {
 
 	};
 
+	vector<practice::Group> getGroups1(DBTableSet5& DB);
 	vector<practice::Group> getGroups(DBTableSet5& DB);
 	string V17(DBTableSet5& DB);
 }

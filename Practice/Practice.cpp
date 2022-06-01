@@ -1,6 +1,17 @@
 #include "practice.h"
 
 namespace practice {
+	Student::Student(size_t id, string name) {
+		if (name.size() > 15 || !name.size())
+		{
+			cout << "Error: Incorrect name size" << endl;
+			cout << "Student::Student(size_t id, string name)" << endl;
+			exit(INCORRECT_INPUT);
+		}
+		this->studentId_ = id;
+		this->name_ = name;
+	}
+
 	Student::Student(size_t id, string name, map<string, size_t> marks) {
 		if (name.size() > 15 || !name.size())
 		{
@@ -177,7 +188,7 @@ namespace practice {
 		}
 	}
 
-	vector<practice::Group> getGroups(DBTableSet5& DB)
+	vector<practice::Group> getGroups1(DBTableSet5& DB)
 	{
 		map<string, DBTable5*> tables = DB.GetDB();
 
@@ -225,5 +236,35 @@ namespace practice {
 		return Groups;
 	}
 
-}
+	vector<practice::Group> getGroups(DBTableSet5& DB)
+	{
+		//DB.PrintDB5(80);
 
+		DBTable5* StudentsFile = DB[STUDENTS_LIST];
+		DBTable5* ResultsFile = DB[RESULTS_LIST];
+
+		// Парсинг StudentsFile: получение первичной инфы (имя и ID) о студенте
+		// и разбиение студентов на группы 
+		Header StudentsFileHeader = StudentsFile->GetHeader();
+		vector<Row> StudentsFileData = StudentsFile->GetData();
+
+		vector<string> groupNamesList;
+
+		for (auto StudentsFileHeaderIter : StudentsFileHeader)
+		{
+			cout << StudentsFileHeaderIter.first << endl;
+			if (StudentsFileHeaderIter.first == "Group")
+			{
+				// Проверяем название группы на вхождение в массив groupNamesList и если её нет в этом массиве, создаём объект класса Group
+				//if (StudentsFileHeaderIter.first)
+				/*{
+
+				}*/
+			}
+		}
+
+
+		return vector<practice::Group>();
+	}
+
+}

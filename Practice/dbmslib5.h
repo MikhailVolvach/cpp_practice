@@ -239,7 +239,7 @@ namespace dbmsLib5
 		void PrintDB5(int numcol);
 		void WriteDB5();
 		string GetDBName() { return dbName; }
-		DBTable5* operator[](string tableName);
+		DBTable5* operator[](string tableName) { return this->db[tableName]; }
 		Relation GetRelation(string relationName);
 		Row ParentRow(Relation& relation, Row& childRow);
 		DBTable5* ChildRows(Relation& relation, Row& parentRow);

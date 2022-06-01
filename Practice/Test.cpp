@@ -71,6 +71,7 @@ int main()
 	DB.ReadDB5();
 	vector<practice::Group> groups = practice::getGroups(DB);
 
+
 	//practice::V17(DB);
 
 	//StudentMethodsTest();
