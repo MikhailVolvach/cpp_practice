@@ -11,6 +11,9 @@
 #include <vector>
 #include <map>
 #include <sstream>
+#include <string_view>
+#include <functional>
+#include <algorithm>
 
 using namespace std;
 namespace dbmsLib5
@@ -255,7 +258,7 @@ namespace dbmsLib5
 	//const int LENGTH = 24;//длина имени таблицы и имени столбца.
 
 	string GetTabNameFromPath(string path);
-	string ignoreBlanc(const string str);
+	string ignoreBlanc(string str);
 	void* GetValue(string value, string columnName, Header hdr);
 	void* SetValue(string value, string columnName, Header hdr);
 	bool comparator(/*TableDataType*/DBType type, void* obj1, Condition condition, void* obj);

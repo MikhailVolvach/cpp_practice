@@ -2,7 +2,7 @@
 
 namespace practice {
 	Student::Student(string groupName, string name, string id) {
-		if (!name.size() || !id.size() || !groupName.size() || name.size() > 15 || id.size() != 6 || groupName.size() > 8)
+		if (!name.size() && !id.size() && !groupName.size() && name.size() > 15 && id.size() != 7 && groupName.size() > 8)
 		{
 			/*cout << "Error: Incorrect name size" << endl;*/
 			cout << "Student::Student(size_t id, string name)" << endl;
@@ -13,8 +13,9 @@ namespace practice {
 		this->studentId_ = id;
 	}
 	
-	Student::Student(string groupName, map<string, size_t> marks, string name, string id) {
-		if (!name.size() || !id.size() || !groupName.size() || name.size() > 15 || id.size() != 6 || groupName.size() > 8)
+	Student::Student(string groupName, string name, string id, map<string, size_t> marks)
+	{
+		if (!name.size() && !id.size() && !groupName.size() && !marks.size() && name.size() > 15 && id.size() != 7 && groupName.size() > 8)
 		{
 			//cout << "Error: Incorrect name size" << endl;
 			cout << "Student::Student(size_t id, string name, map<string, size_t> marks)" << endl;
@@ -35,7 +36,8 @@ namespace practice {
 		return this->groupName_;
 	}
 
-	map<string, size_t> Student::GetMarks() {
+	map<string, size_t> Student::GetMarks()
+	{
 		if (!this->marks_.size())
 		{
 			cout << "Student::GetMarks()" << endl;
@@ -71,17 +73,18 @@ namespace practice {
 		this->groupName_ = groupName;
 	}
 
-	void Student::SetMarks(map<string, size_t> marks) {
+	void Student::SetMarks(map<string, size_t> marks) 
+	{
 		if (!marks.size())
 		{
-			cout << "Student::SetMarks(map<string, size_t> marks)" << endl;
+			cout << "Student::SetMarks(map<string, size_t> marks): 1" << endl;
 			exit(INCORRECT_INPUT);
 		}
 		for (pair<string, size_t> marksIter : marks)
 		{
 			if (marksIter.second > 5 || marksIter.second < 2)
 			{
-				cout << "Student::SetMarks(map<string, size_t> marks)" << endl;
+				cout << "Student::SetMarks(map<string, size_t> marks): 2" << endl;
 				exit(INCORRECT_INPUT);
 			}
 		}
@@ -102,8 +105,9 @@ namespace practice {
 	}
 	
 
-	void Student::AddMark(pair<string, size_t> mark) {
-		if (mark.second < 2 || mark.second > 5 || !mark.first.size())
+	void Student::AddMark(pair<string, size_t> mark) 
+	{
+		if (mark.second < 2 && mark.second > 5 && !mark.first.size())
 		{
 			cout << "Student::AddMark(pair<string, size_t> mark)" << endl;
 			exit(INCORRECT_INPUT);
@@ -112,7 +116,7 @@ namespace practice {
 	}
 	void Student::PrintStudentInfo()
 	{
-		if (!(this->studentId_.size() || this->name_.size() || this->marks_.size())) {
+		if (!(this->studentId_.size() && this->name_.size() && this->marks_.size())) {
 			cout << "Student::PrintStudentInfo()" << endl;
 			exit(EMPTY_CLASS_FIELD);
 		}
@@ -127,11 +131,21 @@ namespace practice {
 
 	Group::Group(string groupName)
 	{
+		if (!groupName.size() && groupName.size() > 8)
+		{
+			cout << "Group::Group(string groupName)" << endl;
+			exit(INCORRECT_INPUT);
+		}
 		this->groupName_ = groupName;
 	}
 
-	Group::Group(string groupName, vector<Student> studentsList)
+	Group::Group(string groupName, map<string, Student> studentsList)
 	{
+		if (!groupName.size() && !studentsList.size() && groupName.size() > 8)
+		{
+			cout << "Group::Group(string groupName, map<string, Student> studentsList)" << endl;
+			exit(INCORRECT_INPUT);
+		}
 		this->groupName_ = groupName;
 		this->amountOfStudents_ = studentsList.size();
 		this->studentsList_ = studentsList;
@@ -147,7 +161,7 @@ namespace practice {
 		return this->groupName_;
 	}
 
-	vector<Student> Group::GetStudentsList()
+	map<string, Student> Group::GetStudentsList()
 	{
 		if (!this->studentsList_.size())
 		{
@@ -172,7 +186,7 @@ namespace practice {
 		this->groupName_ = groupName;
 	}
 
-	void Group::SetStudentsList(vector<Student> studentsList)
+	void Group::SetStudentsList(map<string, Student> studentsList)
 	{
 		if (!studentsList.size())
 		{
@@ -195,15 +209,15 @@ namespace practice {
 
 	void Group::AddStudent(Student Stud)
 	{
-		for (Student groupStrudent : this->studentsList_)
+		for (auto groupStrudent : this->studentsList_)
 		{
-			if (groupStrudent.GetId() == Stud.GetId())
+			if (groupStrudent.second.GetId() == Stud.GetId())
 			{
 				cout << "Group::AddStudent(Student Stud)" << endl;
 				exit(INCORRECT_INPUT);
 			}
 		}
-		this->studentsList_.push_back(Stud);
+		this->studentsList_.insert(pair<string, Student>(Stud.GetId(), Stud));
 		this->amountOfStudents_++;
 	}
 
@@ -212,9 +226,9 @@ namespace practice {
 		cout << "Group : " << this->GetGroupName() << endl;
 		cout << "Amount of students : " << this->GetAmountOfStudents() << endl;
 		cout << "Students: " << endl;
-		for (Student groupStudent : this->GetStudentsList())
+		for (auto groupStudent : this->GetStudentsList())
 		{
-			cout << "\t" << groupStudent.GetId() << " : " << groupStudent.GetName() << endl;
+			cout << "\t" << groupStudent.second.GetId() << " : " << groupStudent.second.GetName() << endl;
 		}
 	}
 
@@ -266,43 +280,114 @@ namespace practice {
 		return Groups;
 	}
 
-	vector<practice::Group> getGroups(DBTableSet5& DB)
+	map<string, practice::Group> getGroups(DBTableSet5& DB)
 	{
 		//DB.PrintDB5(80);
 
-		DBTable5* StudentsFile = DB[STUDENTS_LIST];
-		DBTable5* ResultsFile = DB[RESULTS_LIST];
-
 		// Парсинг StudentsFile: получение первичной инфы (имя и ID) о студенте
 		// и разбиение студентов на группы 
-		Header StudentsFileHeader = StudentsFile->GetHeader();
+		DBTable5* StudentsFile = DB[STUDENTS_LIST];
+
 		vector<Row> StudentsFileData = StudentsFile->GetData();
 
-		vector<string> groupNamesList;
+		map<string, practice::Group> Groups;
 
 		for (Row StudentsFileDataIter : StudentsFileData)
 		{
-			Student newStudent();
-			if (find(groupNamesList.begin(), groupNamesList.end(), StudentsFile->valueToString(StudentsFileDataIter, "Group")) == groupNamesList.end())
+			string groupName = StudentsFile->valueToString(StudentsFileDataIter, "Group");
+			string::iterator it = find_if(groupName.begin(), groupName.end(), not1(ptr_fun(isspace)));
+			groupName.erase(remove(groupName.begin(), it, ' '), it);
+			if (Groups.count(groupName) == 0) // Проверка на существование группы. Если уже есть, новая не создаётся.
 			{
-				Group newGroup(StudentsFile->valueToString(StudentsFileDataIter, "Group"));	// Создание новой группы
-				groupNamesList.push_back(StudentsFile->valueToString(StudentsFileDataIter, "Group")); // Добавление имени группы в массив, служащий для проверки на новизну группы.
+				Group newGroup(groupName);	// Создание новой группы
+				Groups.insert(pair<string, practice::Group>(groupName, newGroup));
 			}
-			/*if ()
-			{*/
-				// Проверяем название группы на вхождение в массив groupNamesList и если её нет в этом массиве, создаём объект класса Group
-				/*if (find(groupNamesList.begin(), groupNamesList.end(), ))
-				{
+			
+			string id = StudentsFile->valueToString(StudentsFileDataIter, "ID");
+			it = std::find_if(id.begin(), id.end(), not1(ptr_fun(isspace)));
+			id.erase(remove(id.begin(), it, ' '), it);
 
-				}*/
-			/*	cout;
+			string name = StudentsFile->valueToString(StudentsFileDataIter, "Name");
+			it = std::find_if(name.begin(), name.end(), not1(ptr_fun(isspace)));
+			name.erase(remove(name.begin(), it, ' '), it);
 
+			Student newStudent(groupName, name, id);
 
-			}*/
+			Groups[newStudent.GetGroupName()].AddStudent(newStudent);
 		}
 
+		// Парсинг ResultsFile: получение данных об оценках студентов
+		// и внесение их в базу (это база!).
+		DBTable5* ResultsFile = DB[RESULTS_LIST];
 
-		return vector<practice::Group>();
+		vector<Row> ResultsFileData = ResultsFile->GetData();
+
+		//map<string, map<string, size_t>> students; // {id, {discipline, mark}}
+
+		//for (Row ResultsFileDataIter : ResultsFileData)
+		//{
+		//	string id = ResultsFile->valueToString(ResultsFileDataIter, "ID");
+		//	string::iterator it = find_if(id.begin(), id.end(), not1(ptr_fun(isspace)));
+		//	id.erase(remove(id.begin(), it, ' '), it);
+		//	cout << id << endl;
+		//	string discipline = ResultsFile->valueToString(ResultsFileDataIter, "discipline");
+		//	it = find_if(discipline.begin(), discipline.end(), not1(ptr_fun(isspace)));
+		//	discipline.erase(remove(discipline.begin(), it, ' '), it);
+
+		//	size_t mark = stoul(ResultsFile->valueToString(ResultsFileDataIter, "mark"));
+		//	students[id][discipline] = mark;
+		//	/*for (auto currentGroup : Groups)
+		//	{
+		//		map<string, Student> list = currentGroup.second.GetStudentsList();
+		//		for (auto student : list)
+		//		{
+		//			if (student.second.GetId() == id)
+		//			{
+		//				student.second.AddMark({ discipline, mark });
+		//			}
+		//		}
+		//	}*/
+		//}
+
+		//for (pair<string, Group> group : Groups)
+		//{
+		//	auto studentsList = group.second.GetStudentsList();
+		//	for (auto student : students)
+		//	{
+		//		group.second.GetStudentsList()[student.first].SetMarks(student.second);
+		//	}
+		//	Group newGroup(group.second.GetGroupName(), group.second.GetStudentsList());
+		//	newGroup.GetStudentsList()["11An471"];
+		//}
+
+		
+	
+
+		for (Row ResultsFileDataIter : ResultsFileData)
+		{
+			for (auto currentGroup : Groups)
+			{
+				string id = ResultsFile->valueToString(ResultsFileDataIter, "ID");
+				string::iterator it = find_if(id.begin(), id.end(), not1(ptr_fun(isspace)));
+				id.erase(remove(id.begin(), it, ' '), it);
+				if (currentGroup.second.GetStudentsList().count(id) == 1)
+				{
+					string discipl = ResultsFile->valueToString(ResultsFileDataIter, "discipline");
+					it = find_if(discipl.begin(), discipl.end(), not1(ptr_fun(isspace)));
+					discipl.erase(remove(discipl.begin(), it, ' '), it);
+
+					size_t mark = stoul(ResultsFile->valueToString(ResultsFileDataIter, "mark"));
+					//string mark = ResultsFile->valueToString(ResultsFileDataIter, "mark");
+
+					cout << discipl << " " << id << " " << mark << endl;
+
+					//currentGroup.second.GetStudentsList()[id].AddMark({ "math", 4});
+					 currentGroup.second.GetStudentsList()[id].AddMark(make_pair(discipl, mark));
+					//currentGroup.second.GetStudentsList()[id].PrintStudentInfo();
+				}
+			}
+		}
+
+		return Groups;
 	}
-
 }

@@ -30,14 +30,17 @@ void StudentMethodsTest()
 	mark.first = "nachert";
 	mark.second = 5;
 	marks.insert(mark);
-	practice::Student student1(1, "Mikhail", marks);
-	student1.PrintStudentInfo();
+	practice::Student student1("IU5-11", "Mikhail", "ffffff");
+	//student1.PrintStudentInfo();
 	
-	student1.SetId(2);
+	student1.AddMark({ "inzh", 4 });
 	student1.PrintStudentInfo();
 
-	student1.SetName("Fyodor");
-	student1.PrintStudentInfo();
+	//student1.SetId(2);
+	//student1.PrintStudentInfo();
+
+	/*student1.SetName("Fyodor");
+	student1.PrintStudentInfo();*/
 }
 
 void GroupsMethodsTest()
@@ -53,9 +56,9 @@ void GroupsMethodsTest()
 		mark.first = "math";
 		mark.second = 4;
 		marks.insert(mark);
-		student.SetId(i);
+		//student.SetId(i);
 		student.SetName(to_string(i) + " Name");
-		student.SetMarks(marks);
+		//student.SetMarks(marks);
 		group1.AddStudent(student);
 	}
 
@@ -69,7 +72,10 @@ int main()
 
 	DBTableSet5 DB(DBNAME);
 	DB.ReadDB5();
-	vector<practice::Group> groups = practice::getGroups(DB);
+	map<string, practice::Group> groups = practice::getGroups(DB);
+
+	//groups["IU5-11"].GetStudentsList()["11An471"].AddMark({"math", 4});
+
 
 
 	//practice::V17(DB);

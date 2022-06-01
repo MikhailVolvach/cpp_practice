@@ -1,4 +1,4 @@
-Results-List|Results-List
+Results-list|Results-list
 ID|String|8|discipline|String|12|mark|Int32|8
 11An471|math|4
 11An471|prog|4
