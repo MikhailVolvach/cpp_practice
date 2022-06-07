@@ -78,7 +78,8 @@ int main()
 
 
 
-	//practice::V17(DB);
+	practice::V17(DB);
+	practice::V16(groups);
 
 	//StudentMethodsTest();
 	//GroupsMethodsTest();

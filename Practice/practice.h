@@ -25,6 +25,7 @@ namespace practice {
 		Student() { 
 			/*this->studentId_ = 0; this->name_ = ""; this->marks_.insert(pair<string, size_t>());*/ 
 		}
+		Student(string groupName, string id);
 		Student(string groupName, string name, string id);
 		Student(string groupName, string name, string id, map<string, size_t> marks);
 		string				GetGroupName();
@@ -62,13 +63,22 @@ namespace practice {
 		//void SetAmountOfStudents(size_t amountOfStudents);
 
 		void AddStudent(Student Stud);
+		void DeleteStudent(string studentId);
+		void UpdateStudent(Student student, string name);
 		void PrintGroup();
+
+		Student operator[](string studentId) { 
+			return studentsList_[studentId];
+		}
 
 	};
 
 	vector<practice::Group> getGroups1(DBTableSet5& DB);
+	map<string, practice::Group> getGroups2(DBTableSet5& DB);
 	map<string, practice::Group> getGroups(DBTableSet5& DB);
 	string V17(DBTableSet5& DB);
+	string V16(map<string, practice::Group> Groups);
+	string deleteSpaces(string str);
 }
 
 #endif // !PRACTICE_H

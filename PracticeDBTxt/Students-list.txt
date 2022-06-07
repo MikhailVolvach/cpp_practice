@@ -25,7 +25,6 @@ IU5-12|12Av682|    Arzamastsev
 IU5-12|12Bv420|        Beketov
 IU5-12|12Vn568|         Vaskin
 IU5-12|12Vh090|        Volvach
-IU5-12|12Ga160|       Gracheva
 IU5-12|12Dn983|       Davidyan
 IU5-12|12Ev443|         Efimov
 IU5-12|12Kn606|       Kazitsin
