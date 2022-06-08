@@ -11,16 +11,6 @@ string practice::V17(DBTableSet5& DB) {
 	//cout << myGroup.GetGroupName() << endl;
 	map<string, size_t> totalDiscipleScore;
 
-	/*for (auto mark : myGroup.GetStudentsList()[].GetMarks())
-	{
-		if (mark.first.size())
-		{
-			pair<string, size_t> disciple;
-			disciple.first = mark.first;
-			disciple.second = 0;
-		}
-	}*/
-
 	for (auto student : myGroup.GetStudentsList())
 	{
 		for (pair<string, size_t> mark : student.second.GetMarks())

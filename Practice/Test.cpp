@@ -1,8 +1,4 @@
-﻿#include <iostream>
-#include "practice.h"
-
-//#include "Create_Students-list_file.cpp"
-
+﻿#include "practice.h"
 
 //void testing() {
 //	//DBTableTxt5 db;
