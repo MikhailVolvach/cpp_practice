@@ -68,6 +68,18 @@ void GroupsMethodsTest()
 	group1.PrintGroup();
 }
 
+practice::Group findStudent(string ID, map<string, practice::Group> groups)
+{
+	for (auto group : groups)
+	{
+		if (group.second.GetStudentsList().count(ID))
+		{
+			return group.second;
+		}
+	}
+	exit(INCORRECT_INPUT);
+}
+
 int menu()
 {
 	cout	<< "================= МАКЕТ СУБД ===================" << endl
@@ -77,9 +89,33 @@ int menu()
 			<< "\t4 - Запись БД в файл" << endl
 			<< "\t5 - Запись сгруппированных таблиц в файлы" << endl
 			<< "\t6 - Зарегистрировать студента" << endl
-			<< "\t7 - Определить дисциплину с наименьшим средним баллом" << endl
-			<< "\t8 - Определить лучшую группу кафедры ИУ5" << endl
-			<< "\t10 - Выход" << endl;
+			<< "\t7 - Изменить данные студента" << endl
+			<< "\t8 - Удалить студента из таблицы" << endl
+			<< "\t9 - Печать информации о студенте" << endl
+			<< "\t10 - Определить дисциплину с наименьшим средним баллом" << endl
+			<< "\t11 - Определить лучшую группу кафедры ИУ5" << endl
+			<< "\t100 - Выход" << endl;
+	int choice;
+	cout << "Выберите действие\n";
+	cin >> choice;
+	while (cin.fail()) {
+		cout << "Ошибка ввода. Повторите ввод\n";
+		cin.clear();
+		cin.ignore(10, '\n');
+		cin >> choice;
+	}
+	return choice;
+}
+
+int changeStudentMenu()
+{
+	cout << "======== Изменение данных пользователя =========" << endl
+		<< "\t1 - Напечатать информацию о студенте" << endl
+		<< "\t2 - Изменить имя студента" << endl
+		<< "\t3 - Перевести студента в другую группу" << endl
+		<< "\t4 - Перезаполнить список оценок студента" << endl
+		<< "\t10 - Выход" << endl;
+		
 	int choice;
 	cout << "Выберите действие\n";
 	cin >> choice;
@@ -168,7 +204,10 @@ void registerNewUser(map<string, practice::Group>& groups)
 				marks.insert(mark);
 			}
 		} while (mark.first != ".");
-		student.SetMarks(marks);
+		if (marks.size())
+		{
+			student.SetMarks(marks);
+		}
 	}
 	if (groups.count(groupName) == 0)
 	{
@@ -179,6 +218,68 @@ void registerNewUser(map<string, practice::Group>& groups)
 	else
 	{
 		groups[groupName].AddStudent(student);
+	}
+}
+
+void changeStudentData(map<string, practice::Group> groups)
+{
+	practice::Student tmpStudent;
+	string studentID;
+	string inputString;
+	int inputNum;
+
+	map<string, size_t> marks;
+	pair<string, size_t> mark;
+
+	cout << "Введите ID студента: "; cin >> studentID;
+	practice::Group group = findStudent(studentID, groups);
+	while (true)
+	{
+		switch (changeStudentMenu())
+		{
+		case 1:
+			group[studentID].PrintStudentInfo();
+			break;
+		case 2: /*Изменение имени студента*/
+			cout << "Введите новое имя студента: "; cin >> inputString;
+			group[studentID].SetName(inputString);
+			group.UpdateStudent(group[studentID], inputString);
+			group[studentID].PrintStudentInfo();
+			break;
+		case 3: /*Изменение номера группы студента*/
+			cout << "Введите новый номер группы студента: "; cin >> inputString;
+			tmpStudent = group[studentID];
+			tmpStudent.SetGroupName(inputString);
+			group.UpdateStudent(tmpStudent, tmpStudent.GetName());
+			//group.DeleteStudent(studentID);
+			//groups[inputString].AddStudent(tmpStudent);
+			groups[inputString][studentID].PrintStudentInfo();
+			break;
+		case 4: /*Изменение списка оценок*/
+			do
+			{
+				cout << "Введите название предмета (. - отмена): "; cin >> mark.first;
+				if (mark.first != ".")
+				{
+					cout << "Введите оценку: "; cin >> mark.second;
+					marks.insert(mark);
+				}
+			} while (mark.first != ".");
+			//tmpStudent = group[studentID];
+			tmpStudent = {group[studentID].GetGroupName(), group[studentID].GetName(), studentID, marks};
+			//tmpStudent.SetMarks(marks);
+			group.DeleteStudent(studentID);
+			group.AddStudent(tmpStudent);
+			//group.UpdateStudent(tmpStudent, tmpStudent.GetName());
+			//group[studentID].SetMarks(marks);
+
+			group[studentID].PrintStudentInfo();
+			break;
+		case 10:
+			return;
+		default:
+			break;
+		}
 	}
 }
 
@@ -194,44 +295,56 @@ int main()
 		exit(UNABLE_TO_OPEN_FILE);
 	}
 	map<string, practice::Group> groups;
+	map<string, practice::Group> tmpGroups;
 	while (true)
 	{
 		switch (menu())
 		{
-		case 1:
+		case 1: /*Чтение БД из файла*/
 			DB.ReadDB5();
+			tmpGroups = groups;
 			groups = practice::getGroups(DB);
+			for (auto tmp : tmpGroups)
+			{
+				groups.insert(tmp);
+			}
 			cout << groups.size() << endl;
 			cout << "========== Считывание завершено ==========" << endl;
 			break;
-		case 2:
+		case 2: /*Печать БД*/
 			DB.PrintDB5(SCREEN_WIDTH);
 			break;
-		case 3:
+		case 3: /*Печать сгруппированных таблиц*/
 			pringGroups(groups);
 			break;
-		case 4:
+		case 4: /*Запись БД в файл*/
 			WriteDB(DB, groups);
 			cout << "======== Запись в файл завершена =========" << endl;
 			break;
-		case 5:
+		case 5: /*Запись сгруппированных таблиц в файлы*/
 			writeGroups(groups);
 			cout << "======== Запись в файл завершена =========" << endl;
 			break;
-		case 6:
+		case 6: /*Зарегистрировать студента*/
 			registerNewUser(groups);
 			cout << "========= Успешная регистрация ===========" << endl;
 			break;
-		case 7:
-			practice::V17(DB);
+		case 7: /*Изменить данные студента*/
+			changeStudentData(groups);
 			break;
-		case 8:
-			practice::V16(groups);
+		case 8: /*Удалить студента из таблицы*/
 			break;
-		case 9:
-			test();
+		case 9: /*Печать информации о студенте*/
+
 			break;
 		case 10:
+			practice::V17(DB);
+			break;
+		case 11:
+			practice::V16(groups);
+			break;
+		
+		case 100:
 			return 0;
 			break;
 			

@@ -98,6 +98,7 @@ namespace practice {
 				exit(INCORRECT_INPUT);
 			}
 		}
+		this->marks_.clear();
 		this->marks_ = marks;
 	}
 
