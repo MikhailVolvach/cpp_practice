@@ -3,19 +3,19 @@
 #include "dbmslib5.h"
 
 //TODO
-//5.1.1.Создание таблиц в базе данных для соответствующих групп кафедры ИУ5. 
-//5.1.2.Добавление новых студентов в таблицы, с данными о текущей успеваемости и без данных.
-//5.1.3.Добавление данных о студенте в таблицу.
-//5.1.4.Изменение данных студента в таблице.
-//5.1.5.Удаление данных о студенте из таблицы.
-//5.1.6.Удаление студентов из таблицы.
-//5.1.7.Печать информации о студенте по его номеру в таблице.
-//5.1.8.Печать таблицы базы данных.
-//5.1.9.Удаление таблицы из базы данных.
-//5.1.10.Определение среднего балла группы по всем предметам.
-//5.1.11.Определение лучшей группы кафедры по среднему баллу каждой группы.
-//5.1.12.Определение дисциплины, по которой студенты группы имеют наименьший средний балл.
-//5.1.13.Печать базы данных.
+//5.1.1.Создание таблиц в базе данных для соответствующих групп кафедры ИУ5. DONE
+//5.1.2.Добавление новых студентов в таблицы, с данными о текущей успеваемости и без данных. DONE
+//5.1.3.Добавление данных о студенте в таблицу. DONE
+//5.1.4.Изменение данных студента в таблице. DONE
+//5.1.5.Удаление данных о студенте из таблицы. DONE
+//5.1.6.Удаление студентов из таблицы. DONE
+//5.1.7.Печать информации о студенте по его номеру в таблице. DONE
+//5.1.8.Печать таблицы базы данных. DONE
+//5.1.9.Удаление таблицы из базы данных. DONE
+//5.1.10.Определение среднего балла группы по всем предметам. DONE.
+//5.1.11.Определение лучшей группы кафедры по среднему баллу каждой группы. DONE.
+//5.1.12.Определение дисциплины, по которой студенты группы имеют наименьший средний балл. DONE.
+//5.1.13.Печать базы данных. DONE.
 
 
 
@@ -31,6 +31,14 @@ using namespace dbmsLib5;
 //void createStudentsListFile(DBTableSet5& DB);
 
 namespace practice {
+	static struct Discipline
+	{
+		string disciplineName;
+		dbmsLib5::DBType type;
+		size_t length;
+	};
+	//map<string, Discipline> disciplines;
+
 	class Student {
 	private:
 		string				groupName_;
@@ -62,6 +70,7 @@ namespace practice {
 		string					groupName_;
 		map<string, Student>	studentsList_;
 		size_t					amountOfStudents_;
+		map<string, Discipline>	disciplines_;
 	public:
 		Group() {}
 		Group(string groupName);
@@ -78,6 +87,8 @@ namespace practice {
 		void DeleteStudent(string studentId);
 		void UpdateStudent(Student student, string name);
 		void PrintGroup();
+		void AddDiscipline(Discipline discipline);
+		void PrintStudent(string studentID);
 
 		Student operator[](string studentId) { 
 			return studentsList_[studentId];
@@ -94,14 +105,9 @@ namespace practice {
 	string deleteSpaces(string str);
 
 
-	struct Discipline
-	{
-		string disciplineName;
-		dbmsLib5::DBType type;
-		size_t length;
-	};
+	
 
-	vector<Discipline> disciplines;
+	
 }
 
 #endif // !PRACTICE_H

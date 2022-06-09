@@ -150,10 +150,10 @@
     <ClInclude Include="practice.h" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\..\Labs_2semestr\Labs_2semestr_CPP\DBMSLIB\x64\Debug\dbmslib5.lib" />
+    <Text Include="..\PracticeDBTxt\Students-list.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\PracticeDBTxt\Students-list.txt" />
+    <Library Include="..\..\Labs_2semestr\Labs_2semestr_CPP\DBMSLIB\x64\Debug\dbmslib5.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

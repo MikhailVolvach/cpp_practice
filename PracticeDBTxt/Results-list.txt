@@ -1,226 +1,226 @@
 Results-list|Results-list
-ID|String|8|group|String|8|discipline|String|12|mark|Int32|8
-11An471|math|IU5-11|4
-11An471|prog|IU5-11|4
-11An471|nach|IU5-11|3
-11An471|ptp|IU5-11|3
-11Av490|math|IU5-11|5
-11Av490|prog|IU5-11|5
-11Av490|nach|IU5-11|5
-11Av490|ptp|IU5-11|5
-11Ga288|math|IU5-11|5
-11Ga288|prog|IU5-11|5
-11Ga288|nach|IU5-11|5
-11Ga288|ptp|IU5-11|5
-11Iv554|math|IU5-11|4
-11Iv554|prog|IU5-11|4
-11Iv554|nach|IU5-11|5
-11Iv554|ptp|IU5-11|5
-11Kv171|math|IU5-11|5
-11Kv171|prog|IU5-11|5
-11Kv171|nach|IU5-11|5
-11Kv171|ptp|IU5-11|5
-11Kk251|math|IU5-11|5
-11Kk251|prog|IU5-11|5
-11Kk251|nach|IU5-11|5
-11Kk251|ptp|IU5-11|4
-11Ky167|math|IU5-11|4
-11Ky167|prog|IU5-11|5
-11Ky167|nach|IU5-11|5
-11Ky167|ptp|IU5-11|5
-11Ka324|math|IU5-11|4
-11Ka324|prog|IU5-11|5
-11Ka324|nach|IU5-11|4
-11Ka324|ptp|IU5-11|4
-11Ka122|math|IU5-11|4
-11Ka122|prog|IU5-11|4
-11Ka122|nach|IU5-11|5
-11Ka122|ptp|IU5-11|5
-11Mn586|math|IU5-11|3
-11Mn586|prog|IU5-11|4
-11Mn586|nach|IU5-11|3
-11Mn586|ptp|IU5-11|3
-11Mv167|math|IU5-11|4
-11Mv167|prog|IU5-11|4
-11Mv167|nach|IU5-11|5
-11Mv167|ptp|IU5-11|5
-11Ov298|math|IU5-11|5
-11Ov298|prog|IU5-11|5
-11Ov298|nach|IU5-11|5
-11Ov298|ptp|IU5-11|5
-11Sv597|math|IU5-11|4
-11Sv597|prog|IU5-11|4
-11Sv597|nach|IU5-11|5
-11Sv597|ptp|IU5-11|5
-11Sn134|math|IU5-11|3
-11Sn134|prog|IU5-11|4
-11Sn134|nach|IU5-11|4
-11Sn134|ptp|IU5-11|4
-11Sl332|math|IU5-11|5
-11Sl332|prog|IU5-11|5
-11Sl332|nach|IU5-11|5
-11Sl332|ptp|IU5-11|4
-11Sa114|math|IU5-11|4
-11Sa114|prog|IU5-11|4
-11Sa114|nach|IU5-11|5
-11Sa114|ptp|IU5-11|4
-11Sv783|math|IU5-11|3
-11Sv783|prog|IU5-11|4
-11Sv783|nach|IU5-11|5
-11Sv783|ptp|IU5-11|5
-11Ty724|math|IU5-11|4
-11Ty724|prog|IU5-11|4
-11Ty724|nach|IU5-11|5
-11Ty724|ptp|IU5-11|5
-11Uy397|math|IU5-11|5
-11Uy397|prog|IU5-11|5
-11Uy397|nach|IU5-11|5
-11Uy397|ptp|IU5-11|5
-11Hv891|math|IU5-11|5
-11Hv891|prog|IU5-11|5
-11Hv891|nach|IU5-11|5
-11Hv891|ptp|IU5-11|5
-12Aa056|math|IU5-12|4
-12Aa056|prog|IU5-12|4
-12Aa056|nach|IU5-12|3
-12Aa056|ptp|IU5-12|4
-12Av682|math|IU5-12|5
-12Av682|prog|IU5-12|4
-12Av682|nach|IU5-12|5
-12Av682|ptp|IU5-12|5
-12Bv420|math|IU5-12|5
-12Bv420|prog|IU5-12|5
-12Bv420|nach|IU5-12|5
-12Bv420|ptp|IU5-12|5
-12Vn568|math|IU5-12|4
-12Vn568|prog|IU5-12|3
-12Vn568|nach|IU5-12|4
-12Vn568|ptp|IU5-12|4
-12Vh090|math|IU5-12|5
-12Vh090|prog|IU5-12|5
-12Vh090|nach|IU5-12|4
-12Vh090|ptp|IU5-12|5
-12Dn983|math|IU5-12|4
-12Dn983|prog|IU5-12|4
-12Dn983|nach|IU5-12|4
-12Dn983|ptp|IU5-12|3
-12Ev443|math|IU5-12|5
-12Ev443|prog|IU5-12|4
-12Ev443|nach|IU5-12|5
-12Ev443|ptp|IU5-12|5
-12Kn606|math|IU5-12|5
-12Kn606|prog|IU5-12|5
-12Kn606|nach|IU5-12|5
-12Kn606|ptp|IU5-12|5
-12Ka816|math|IU5-12|4
-12Ka816|prog|IU5-12|5
-12Ka816|nach|IU5-12|4
-12Ka816|ptp|IU5-12|4
-12KA694|math|IU5-12|4
-12KA694|prog|IU5-12|4
-12KA694|nach|IU5-12|4
-12KA694|ptp|IU5-12|4
-12KY873|math|IU5-12|5
-12KY873|prog|IU5-12|5
-12KY873|nach|IU5-12|4
-12KY873|ptp|IU5-12|5
-12Lo928|math|IU5-12|5
-12Lo928|prog|IU5-12|4
-12Lo928|nach|IU5-12|4
-12Lo928|ptp|IU5-12|4
-12No531|math|IU5-12|4
-12No531|prog|IU5-12|5
-12No531|nach|IU5-12|4
-12No531|ptp|IU5-12|5
-12Pa489|math|IU5-12|4
-12Pa489|prog|IU5-12|4
-12Pa489|nach|IU5-12|3
-12Pa489|ptp|IU5-12|4
-12Pv670|math|IU5-12|4
-12Pv670|prog|IU5-12|4
-12Pv670|nach|IU5-12|5
-12Pv670|ptp|IU5-12|5
-12Sv163|math|IU5-12|4
-12Sv163|prog|IU5-12|5
-12Sv163|nach|IU5-12|3
-12Sv163|ptp|IU5-12|3
-12Sk245|math|IU5-12|5
-12Sk245|prog|IU5-12|5
-12Sk245|nach|IU5-12|5
-12Sk245|ptp|IU5-12|5
-12Sv790|math|IU5-12|5
-12Sv790|prog|IU5-12|5
-12Sv790|nach|IU5-12|4
-12Sv790|ptp|IU5-12|5
-13Bk273|math|IU5-13|5
-13Bk273|prog|IU5-13|5
-13Bk273|nach|IU5-13|5
-13Bk273|ptp|IU5-13|5
-13Va106|math|IU5-13|4
-13Va106|prog|IU5-13|5
-13Va106|nach|IU5-13|5
-13Va106|ptp|IU5-13|5
-13Gv756|math|IU5-13|5
-13Gv756|prog|IU5-13|5
-13Gv756|nach|IU5-13|5
-13Gv756|ptp|IU5-13|5
-13Jv145|math|IU5-13|4
-13Jv145|prog|IU5-13|4
-13Jv145|nach|IU5-13|4
-13Jv145|ptp|IU5-13|5
-13Io002|math|IU5-13|4
-13Io002|prog|IU5-13|5
-13Io002|nach|IU5-13|5
-13Io002|ptp|IU5-13|5
-13Kv641|math|IU5-13|5
-13Kv641|prog|IU5-13|5
-13Kv641|nach|IU5-13|5
-13Kv641|ptp|IU5-13|5
-13Kv170|math|IU5-13|5
-13Kv170|prog|IU5-13|5
-13Kv170|nach|IU5-13|4
-13Kv170|ptp|IU5-13|5
-13La777|math|IU5-13|4
-13La777|prog|IU5-13|4
-13La777|nach|IU5-13|4
-13La777|ptp|IU5-13|5
-13Lv337|math|IU5-13|4
-13Lv337|prog|IU5-13|5
-13Lv337|nach|IU5-13|5
-13Lv337|ptp|IU5-13|5
-13Lv995|math|IU5-13|4
-13Lv995|prog|IU5-13|5
-13Lv995|nach|IU5-13|5
-13Lv995|ptp|IU5-13|5
-13Pv818|math|IU5-13|4
-13Pv818|prog|IU5-13|4
-13Pv818|nach|IU5-13|5
-13Pv818|ptp|IU5-13|4
-13Pv662|math|IU5-13|5
-13Pv662|prog|IU5-13|4
-13Pv662|nach|IU5-13|5
-13Pv662|ptp|IU5-13|5
-13Pv830|math|IU5-13|4
-13Pv830|prog|IU5-13|5
-13Pv830|nach|IU5-13|4
-13Pv830|ptp|IU5-13|5
-13Rv210|math|IU5-13|4
-13Rv210|prog|IU5-13|4
-13Rv210|nach|IU5-13|3
-13Rv210|ptp|IU5-13|5
-13Pn905|math|IU5-13|4
-13Pn905|prog|IU5-13|4
-13Pn905|nach|IU5-13|5
-13Pn905|ptp|IU5-13|5
-13Sn874|math|IU5-13|4
-13Sn874|prog|IU5-13|4
-13Sn874|nach|IU5-13|4
-13Sn874|ptp|IU5-13|4
-13Sa153|math|IU5-13|4
-13Sa153|prog|IU5-13|5
-13Sa153|nach|IU5-13|4
-13Sa153|ptp|IU5-13|4
-13Sv102|math|IU5-13|4
-13Sv102|prog|IU5-13|3
-13Sv102|nach|IU5-13|4
-13Sv102|ptp|IU5-13|4
+Group|String|8|ID|String|8|discipline|String|12|mark|Int32|8
+  IU5-11| 11An471|        math|       4
+  IU5-11| 11An471|        nach|       3
+  IU5-11| 11An471|        prog|       4
+  IU5-11| 11An471|         ptp|       3
+  IU5-11| 11Av490|        math|       5
+  IU5-11| 11Av490|        nach|       5
+  IU5-11| 11Av490|        prog|       5
+  IU5-11| 11Av490|         ptp|       5
+  IU5-11| 11Ga288|        math|       5
+  IU5-11| 11Ga288|        nach|       5
+  IU5-11| 11Ga288|        prog|       5
+  IU5-11| 11Ga288|         ptp|       5
+  IU5-11| 11Hv891|        math|       5
+  IU5-11| 11Hv891|        nach|       5
+  IU5-11| 11Hv891|        prog|       5
+  IU5-11| 11Hv891|         ptp|       5
+  IU5-11| 11Iv554|        math|       4
+  IU5-11| 11Iv554|        nach|       5
+  IU5-11| 11Iv554|        prog|       4
+  IU5-11| 11Iv554|         ptp|       5
+  IU5-11| 11Ka122|        math|       4
+  IU5-11| 11Ka122|        nach|       5
+  IU5-11| 11Ka122|        prog|       4
+  IU5-11| 11Ka122|         ptp|       5
+  IU5-11| 11Ka324|        math|       4
+  IU5-11| 11Ka324|        nach|       4
+  IU5-11| 11Ka324|        prog|       5
+  IU5-11| 11Ka324|         ptp|       4
+  IU5-11| 11Kk251|        math|       5
+  IU5-11| 11Kk251|        nach|       5
+  IU5-11| 11Kk251|        prog|       5
+  IU5-11| 11Kk251|         ptp|       4
+  IU5-11| 11Kv171|        math|       5
+  IU5-11| 11Kv171|        nach|       5
+  IU5-11| 11Kv171|        prog|       5
+  IU5-11| 11Kv171|         ptp|       5
+  IU5-11| 11Ky167|        math|       4
+  IU5-11| 11Ky167|        nach|       5
+  IU5-11| 11Ky167|        prog|       5
+  IU5-11| 11Ky167|         ptp|       5
+  IU5-11| 11Mn586|        math|       3
+  IU5-11| 11Mn586|        nach|       3
+  IU5-11| 11Mn586|        prog|       4
+  IU5-11| 11Mn586|         ptp|       3
+  IU5-11| 11Mv167|        math|       4
+  IU5-11| 11Mv167|        nach|       5
+  IU5-11| 11Mv167|        prog|       4
+  IU5-11| 11Mv167|         ptp|       5
+  IU5-11| 11Ov298|        math|       5
+  IU5-11| 11Ov298|        nach|       5
+  IU5-11| 11Ov298|        prog|       5
+  IU5-11| 11Ov298|         ptp|       5
+  IU5-11| 11Sa114|        math|       4
+  IU5-11| 11Sa114|        nach|       5
+  IU5-11| 11Sa114|        prog|       4
+  IU5-11| 11Sa114|         ptp|       4
+  IU5-11| 11Sl332|        math|       5
+  IU5-11| 11Sl332|        nach|       5
+  IU5-11| 11Sl332|        prog|       5
+  IU5-11| 11Sl332|         ptp|       4
+  IU5-11| 11Sn134|        math|       3
+  IU5-11| 11Sn134|        nach|       4
+  IU5-11| 11Sn134|        prog|       4
+  IU5-11| 11Sn134|         ptp|       4
+  IU5-11| 11Sv597|        math|       4
+  IU5-11| 11Sv597|        nach|       5
+  IU5-11| 11Sv597|        prog|       4
+  IU5-11| 11Sv597|         ptp|       5
+  IU5-11| 11Sv783|        math|       3
+  IU5-11| 11Sv783|        nach|       5
+  IU5-11| 11Sv783|        prog|       4
+  IU5-11| 11Sv783|         ptp|       5
+  IU5-11| 11Ty724|        math|       4
+  IU5-11| 11Ty724|        nach|       5
+  IU5-11| 11Ty724|        prog|       4
+  IU5-11| 11Ty724|         ptp|       5
+  IU5-11| 11Uy397|        math|       5
+  IU5-11| 11Uy397|        nach|       5
+  IU5-11| 11Uy397|        prog|       5
+  IU5-11| 11Uy397|         ptp|       5
+  IU5-12| 12Aa056|        math|       4
+  IU5-12| 12Aa056|        nach|       3
+  IU5-12| 12Aa056|        prog|       4
+  IU5-12| 12Aa056|         ptp|       4
+  IU5-12| 12Av682|        math|       5
+  IU5-12| 12Av682|        nach|       5
+  IU5-12| 12Av682|        prog|       4
+  IU5-12| 12Av682|         ptp|       5
+  IU5-12| 12Bv420|        math|       5
+  IU5-12| 12Bv420|        nach|       5
+  IU5-12| 12Bv420|        prog|       5
+  IU5-12| 12Bv420|         ptp|       5
+  IU5-12| 12Dn983|        math|       4
+  IU5-12| 12Dn983|        nach|       4
+  IU5-12| 12Dn983|        prog|       4
+  IU5-12| 12Dn983|         ptp|       3
+  IU5-12| 12Ev443|        math|       5
+  IU5-12| 12Ev443|        nach|       5
+  IU5-12| 12Ev443|        prog|       4
+  IU5-12| 12Ev443|         ptp|       5
+  IU5-12| 12KA694|        math|       4
+  IU5-12| 12KA694|        nach|       4
+  IU5-12| 12KA694|        prog|       4
+  IU5-12| 12KA694|         ptp|       4
+  IU5-12| 12KY873|        math|       5
+  IU5-12| 12KY873|        nach|       4
+  IU5-12| 12KY873|        prog|       5
+  IU5-12| 12KY873|         ptp|       5
+  IU5-12| 12Ka816|        math|       4
+  IU5-12| 12Ka816|        nach|       4
+  IU5-12| 12Ka816|        prog|       5
+  IU5-12| 12Ka816|         ptp|       4
+  IU5-12| 12Kn606|        math|       5
+  IU5-12| 12Kn606|        nach|       5
+  IU5-12| 12Kn606|        prog|       5
+  IU5-12| 12Kn606|         ptp|       5
+  IU5-12| 12Lo928|        math|       5
+  IU5-12| 12Lo928|        nach|       4
+  IU5-12| 12Lo928|        prog|       4
+  IU5-12| 12Lo928|         ptp|       4
+  IU5-12| 12No531|        math|       4
+  IU5-12| 12No531|        nach|       4
+  IU5-12| 12No531|        prog|       5
+  IU5-12| 12No531|         ptp|       5
+  IU5-12| 12Pa489|        math|       4
+  IU5-12| 12Pa489|        nach|       3
+  IU5-12| 12Pa489|        prog|       4
+  IU5-12| 12Pa489|         ptp|       4
+  IU5-12| 12Pv670|        math|       4
+  IU5-12| 12Pv670|        nach|       5
+  IU5-12| 12Pv670|        prog|       4
+  IU5-12| 12Pv670|         ptp|       5
+  IU5-12| 12Sk245|        math|       5
+  IU5-12| 12Sk245|        nach|       5
+  IU5-12| 12Sk245|        prog|       5
+  IU5-12| 12Sk245|         ptp|       5
+  IU5-12| 12Sv163|        math|       4
+  IU5-12| 12Sv163|        nach|       3
+  IU5-12| 12Sv163|        prog|       5
+  IU5-12| 12Sv163|         ptp|       3
+  IU5-12| 12Sv790|        math|       5
+  IU5-12| 12Sv790|        nach|       4
+  IU5-12| 12Sv790|        prog|       5
+  IU5-12| 12Sv790|         ptp|       5
+  IU5-12| 12Vh090|        math|       5
+  IU5-12| 12Vh090|        nach|       4
+  IU5-12| 12Vh090|        prog|       5
+  IU5-12| 12Vh090|         ptp|       5
+  IU5-12| 12Vn568|        math|       4
+  IU5-12| 12Vn568|        nach|       4
+  IU5-12| 12Vn568|        prog|       3
+  IU5-12| 12Vn568|         ptp|       4
+  IU5-13| 13Bk273|        math|       5
+  IU5-13| 13Bk273|        nach|       5
+  IU5-13| 13Bk273|        prog|       5
+  IU5-13| 13Bk273|         ptp|       5
+  IU5-13| 13Gv756|        math|       5
+  IU5-13| 13Gv756|        nach|       5
+  IU5-13| 13Gv756|        prog|       5
+  IU5-13| 13Gv756|         ptp|       5
+  IU5-13| 13Io002|        math|       4
+  IU5-13| 13Io002|        nach|       5
+  IU5-13| 13Io002|        prog|       5
+  IU5-13| 13Io002|         ptp|       5
+  IU5-13| 13Jv145|        math|       4
+  IU5-13| 13Jv145|        nach|       4
+  IU5-13| 13Jv145|        prog|       4
+  IU5-13| 13Jv145|         ptp|       5
+  IU5-13| 13Kv170|        math|       5
+  IU5-13| 13Kv170|        nach|       4
+  IU5-13| 13Kv170|        prog|       5
+  IU5-13| 13Kv170|         ptp|       5
+  IU5-13| 13Kv641|        math|       5
+  IU5-13| 13Kv641|        nach|       5
+  IU5-13| 13Kv641|        prog|       5
+  IU5-13| 13Kv641|         ptp|       5
+  IU5-13| 13La777|        math|       4
+  IU5-13| 13La777|        nach|       4
+  IU5-13| 13La777|        prog|       4
+  IU5-13| 13La777|         ptp|       5
+  IU5-13| 13Lv337|        math|       4
+  IU5-13| 13Lv337|        nach|       5
+  IU5-13| 13Lv337|        prog|       5
+  IU5-13| 13Lv337|         ptp|       5
+  IU5-13| 13Lv995|        math|       4
+  IU5-13| 13Lv995|        nach|       5
+  IU5-13| 13Lv995|        prog|       5
+  IU5-13| 13Lv995|         ptp|       5
+  IU5-13| 13Pn905|        math|       4
+  IU5-13| 13Pn905|        nach|       5
+  IU5-13| 13Pn905|        prog|       4
+  IU5-13| 13Pn905|         ptp|       5
+  IU5-13| 13Pv662|        math|       5
+  IU5-13| 13Pv662|        nach|       5
+  IU5-13| 13Pv662|        prog|       4
+  IU5-13| 13Pv662|         ptp|       5
+  IU5-13| 13Pv818|        math|       4
+  IU5-13| 13Pv818|        nach|       5
+  IU5-13| 13Pv818|        prog|       4
+  IU5-13| 13Pv818|         ptp|       4
+  IU5-13| 13Pv830|        math|       4
+  IU5-13| 13Pv830|        nach|       4
+  IU5-13| 13Pv830|        prog|       5
+  IU5-13| 13Pv830|         ptp|       5
+  IU5-13| 13Rv210|        math|       4
+  IU5-13| 13Rv210|        nach|       3
+  IU5-13| 13Rv210|        prog|       4
+  IU5-13| 13Rv210|         ptp|       5
+  IU5-13| 13Sa153|        math|       4
+  IU5-13| 13Sa153|        nach|       4
+  IU5-13| 13Sa153|        prog|       5
+  IU5-13| 13Sa153|         ptp|       4
+  IU5-13| 13Sn874|        math|       4
+  IU5-13| 13Sn874|        nach|       4
+  IU5-13| 13Sn874|        prog|       4
+  IU5-13| 13Sn874|         ptp|       4
+  IU5-13| 13Sv102|        math|       4
+  IU5-13| 13Sv102|        nach|       4
+  IU5-13| 13Sv102|        prog|       3
+  IU5-13| 13Sv102|         ptp|       4
+  IU5-13| 13Va106|        math|       4
+  IU5-13| 13Va106|        nach|       5
+  IU5-13| 13Va106|        prog|       5
+  IU5-13| 13Va106|         ptp|       5

@@ -1,0 +1,20 @@
+IU5-12|IU5-12
+ID|String|7|Name|String|15|math|Int32|8|nach|Int32|8|prog|Int32|8|ptp|Int32|8
+12Aa056|     Altsybeeva|       4|       3|       4|       4
+12Av682|    Arzamastsev|       5|       5|       4|       5
+12Bv420|        Beketov|       5|       5|       5|       5
+12Dn983|       Davidyan|       4|       4|       4|       3
+12Ev443|         Efimov|       5|       5|       4|       5
+12KA694|        KuzminA|       4|       4|       4|       4
+12KY873|        KuzminY|       5|       4|       5|       5
+12Ka816|      Kirillova|       4|       4|       5|       4
+12Kn606|       Kazitsin|       5|       5|       5|       5
+12Lo928|         Lyalko|       5|       4|       4|       4
+12No531|     Nesterenko|       4|       4|       5|       5
+12Pa489|         Popova|       4|       3|       4|       4
+12Pv670|     Pustovalov|       4|       5|       4|       5
+12Sk245|      Semchonok|       5|       5|       5|       5
+12Sv163|       Secretov|       4|       3|       5|       3
+12Sv790|      Schepetov|       5|       4|       5|       5
+12Vh090|        Volvach|       5|       4|       5|       5
+12Vn568|         Vaskin|       4|       4|       3|       4

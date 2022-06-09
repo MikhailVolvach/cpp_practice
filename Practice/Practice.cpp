@@ -1,6 +1,7 @@
 #include "practice.h"
 
 namespace practice {
+	map<string, Discipline> disciplines;
 	Student::Student(string groupName, string id)
 	{
 		if (!id.size() && !groupName.size() && id.size() != 7 && groupName.size() > 8)
@@ -208,14 +209,14 @@ namespace practice {
 
 	void Group::AddStudent(Student Stud)
 	{
-		for (auto groupStrudent : this->studentsList_)
+		/*for (auto groupStrudent : this->studentsList_)
 		{
 			if (groupStrudent.second.GetId() == Stud.GetId())
 			{
 				cout << "Group::AddStudent(Student Stud)" << endl;
 				exit(INCORRECT_INPUT);
 			}
-		}
+		}*/
 		this->studentsList_.insert(pair<string, Student>(Stud.GetId(), Stud));
 		this->amountOfStudents_++;
 	}
@@ -225,6 +226,7 @@ namespace practice {
 		if (this->studentsList_.count(studentId) == 0)
 		{
 			cout << "“акого студента нет!" << endl;
+			exit(INCORRECT_INPUT);
 		}
 		else
 		{
@@ -245,6 +247,10 @@ namespace practice {
 
 	void Group::PrintGroup()
 	{
+		if (!this->groupName_.size())
+		{
+			exit(NOTHING_TO_PRINT);
+		}
 		cout << "Group : " << this->GetGroupName() << endl;
 		cout << "Amount of students : " << this->GetAmountOfStudents() << endl;
 		cout << "Students: " << endl;
@@ -254,6 +260,16 @@ namespace practice {
 		}
 	}
 
+	void Group::AddDiscipline(Discipline discipline)
+	{
+		this->disciplines_.insert({ discipline.disciplineName, discipline });
+	}
+
+	void Group::PrintStudent(string studentID)
+	{
+		this->GetStudentsList()[studentID].PrintStudentInfo();
+	}
+
 	void Group::WriteGroupToFile()
 	{
 		ofstream FILE(PATH + this->GetGroupName() + ".txt");
@@ -261,15 +277,24 @@ namespace practice {
 		FILE << this->GetGroupName() << "|" << this->GetGroupName() << "\n";
 
 
+		FILE << "ID|String|7|Name|String|15";
+		for (auto discipleIter : this->disciplines_)
+		{
+			Discipline discipline = discipleIter.second;
+			FILE << "|" << discipline.disciplineName << "|" << typeNames[discipline.type] << "|" << discipline.length;
+		}
+		FILE << "\n";
+
 
 		for (auto student : this->GetStudentsList())
 		{
-			for (pair<string, size_t> studentMarks : student.second.GetMarks())
+			FILE << setw(7) << student.second.GetId() << "|"
+				 << setw(15) << student.second.GetName();
+			for (pair<string, size_t> mark : student.second.GetMarks())
 			{
-
+				FILE << "|" << setw(this->disciplines_[mark.first].length) << mark.second;
 			}
-
-			break;
+			FILE << "\n";
 		}
 		
 	}
@@ -278,14 +303,6 @@ namespace practice {
 	{
 		DBTable5* StudentsFile = DB[STUDENTS_LIST];
 		DBTable5* ResultsFile = DB[RESULTS_LIST];
-
-		// ѕарсинг ResultsFile: получение названий предметов, размера соответствующей €чейки в таблице и типа данных дл€ €чейки
-		Header ResultsFIleHeader = ResultsFile->GetHeader();
-		for (auto ResultsFileHeaderIter : ResultsFIleHeader)
-		{
-			Discipline currentDisc = { ResultsFileHeaderIter.second.colName, ResultsFileHeaderIter.second.colType, ResultsFileHeaderIter.second.length };
-			disciplines.push_back(currentDisc);
-		}
 
 		// ѕарсинг ResultsFile: получение ID и оценок студента
 		// и разбиение студентов на группы 
@@ -300,7 +317,7 @@ namespace practice {
 		{
 			string id =			deleteSpaces(	ResultsFile->valueToString(ResultsFileDataIter, "ID"));
 			string discipline = deleteSpaces(	ResultsFile->valueToString(ResultsFileDataIter, "discipline"));
-			string groupName =	deleteSpaces(	ResultsFile->valueToString(ResultsFileDataIter, "group"));
+			string groupName =	deleteSpaces(	ResultsFile->valueToString(ResultsFileDataIter, "Group"));
 			int mark =			stoi(			ResultsFile->valueToString(ResultsFileDataIter, "mark"));
 			
 			if (students.count(id) == 0)
@@ -314,8 +331,10 @@ namespace practice {
 			if (groups.count(groupName) == 0)
 			{
 				Group newGroup(groupName);
+				
 				groups.insert({ groupName, newGroup });
 			}
+			groups[groupName].AddDiscipline({ discipline, Int32, 8 });
 		}
 		
 		for (auto group : groups)
@@ -326,10 +345,8 @@ namespace practice {
 				string groupNameStudent = student.second.GetGroupName();
 				if (groupNameGroup == groupNameStudent)
 				{
-					cout << " Yes";
 					group.second.AddStudent(student.second);
 				}
-				cout << endl;
 			}
 			resultGroups.insert(group);
 		}
@@ -353,10 +370,8 @@ namespace practice {
 				string groupNameStudent = student.second.GetGroupName();
 				if (groupNameGroup == groupNameStudent)
 				{
-					cout << " Yes";
 					group.second.AddStudent(student.second);
 				}
-				cout << endl;
 			}
 			resultGroups.insert(group);
 		}

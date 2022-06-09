@@ -1,7 +1,7 @@
-#include "practice.h"
-
+//#include "practice.h"
+//
 //void createStudentsListFile(DBTableSet5 &DB) {
-//	vector<practice::Group> groups = practice::getGroups(DB);
+//	map<string, practice::Group> groups = practice::getGroups(DB);
 //
 //	ofstream File("../PracticeDBTxt/Students-list.txt");
 //
@@ -11,14 +11,14 @@
 //	File << "Group|String|8|ID|String|8|Name|String|15" << endl;
 //
 //	//Студенты
-//	for (practice::Group group : groups)
+//	for (auto group : groups)
 //	{
-//		for (practice::Student student : group.GetStudentsList())
+//		for (auto student : group.second.GetStudentsList())
 //		{
-//			File << setw(8 - group.GetGroupName().size()) << setfill(' ') << group.GetGroupName() << "|";
-//			string ID = group.GetGroupName().substr(group.GetGroupName().find_last_of('-') + 1) + student.GetName().substr(student.GetName().find_last_of(' ') + 1, 1) + student.GetName().substr(student.GetName().size() - 1) + to_string(rand() % 10) + to_string(rand() % 10) + to_string(rand() % 10);
+//			File << setw(8 - group.second.GetGroupName().size()) << setfill(' ') << group.second.GetGroupName() << "|";
+//			string ID = group.second.GetGroupName().substr(group.second.GetGroupName().find_last_of('-') + 1) + student.second.GetName().substr(student.second.GetName().find_last_of(' ') + 1, 1) + student.second.GetName().substr(student.second.GetName().size() - 1) + to_string(rand() % 10) + to_string(rand() % 10) + to_string(rand() % 10);
 //			File << setw(8 - ID.size()) << ID << "|";
-//			File << setw(15) << student.GetName().substr(student.GetName().find_last_of(' ') + 1) << endl;
+//			File << setw(15) << student.second.GetName().substr(student.second.GetName().find_last_of(' ') + 1) << endl;
 //		}
 //	}
 //}

@@ -22,8 +22,8 @@ namespace dbmsLib5
 		EMPTY_ARGUMENT,
 		EMPTY_CLASS_FIELD,
 		INCORRECT_INPUT,
-		NOT_EMPTY_CLASS,
 		NOTHING_TO_PRINT,
+		UNABLE_TO_OPEN_FILE
 	};
 
 	static const int arrDays[13] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };

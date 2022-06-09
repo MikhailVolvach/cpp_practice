@@ -1,0 +1,20 @@
+IU5-13|IU5-13
+ID|String|7|Name|String|15|math|Int32|8|nach|Int32|8|prog|Int32|8|ptp|Int32|8
+13Bk273|          Baluk|       5|       5|       5|       5
+13Gv756|       Gorkunov|       5|       5|       5|       5
+13Io002|     Ivanchenko|       4|       5|       5|       5
+13Jv145|       Jurmilov|       4|       4|       4|       5
+13Kv170|      Kuznetsov|       5|       4|       5|       5
+13Kv641|        Komarov|       5|       5|       5|       5
+13La777|       Lebedeva|       4|       4|       4|       5
+13Lv337|        Lobanov|       4|       5|       5|       5
+13Lv995|       Lukyanov|       4|       5|       5|       5
+13Pn905|          Pibin|       4|       5|       4|       5
+13Pv662|       Polyakov|       5|       5|       4|       5
+13Pv818|      Permyakov|       4|       5|       4|       4
+13Pv830|          Popov|       4|       4|       5|       5
+13Rv210|      Rasskazov|       4|       3|       4|       5
+13Sa153|          Skiba|       4|       4|       5|       4
+13Sn874|       Sargsyan|       4|       4|       4|       4
+13Sv102|        Sokolov|       4|       4|       3|       4
+13Va106|         Valova|       4|       5|       5|       5

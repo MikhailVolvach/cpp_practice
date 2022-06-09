@@ -1,58 +1,58 @@
 Students-list|Students-list
 Group|String|8|ID|String|8|Name|String|15
-IU5-11|11An471|     Akhmadulin
-IU5-11|11Av490|        Ashurov
-IU5-11|11Ga288|        Gapeeva
-IU5-11|11Iv554|        Izibaev
-IU5-11|11Kv171|        Koibaev
-IU5-11|11Kk251|   Kolomiychuck
-IU5-11|11Ky167|      Koretskiy
-IU5-11|11Ka324|         Kotova
-IU5-11|11Ka122|      Kurzanova
-IU5-11|11Mn586|       Makridin
-IU5-11|11Mv167|       Mikhalev
-IU5-11|11Ov298|         Orazov
-IU5-11|11Sv597|        Sadirov
-IU5-11|11Sn134|     Sarckisyan
-IU5-11|11Sl332|          Sigal
-IU5-11|11Sa114|  Slepchenckova
-IU5-11|11Sv783|      Stroganov
-IU5-11|11Ty724|  Tolstolutskiy
-IU5-11|11Uy397|      Uspenskiy
-IU5-11|11Hv891|         Hohlov
-IU5-12|12Aa056|     Altsybeeva
-IU5-12|12Av682|    Arzamastsev
-IU5-12|12Bv420|        Beketov
-IU5-12|12Vn568|         Vaskin
-IU5-12|12Vh090|        Volvach
-IU5-12|12Dn983|       Davidyan
-IU5-12|12Ev443|         Efimov
-IU5-12|12Kn606|       Kazitsin
-IU5-12|12Ka816|      Kirillova
-IU5-12|12KA694|        KuzminA
-IU5-12|12KY873|        KuzminY
-IU5-12|12Lo928|         Lyalko
-IU5-12|12No531|     Nesterenko
-IU5-12|12Pa489|         Popova
-IU5-12|12Pv670|     Pustovalov
-IU5-12|12Sv163|       Secretov
-IU5-12|12Sk245|      Semchonok
-IU5-12|12Sv790|      Schepetov
-IU5-13|13Bk273|          Baluk
-IU5-13|13Va106|         Valova
-IU5-13|13Gv756|       Gorkunov
-IU5-13|13Jv145|       Jurmilov
-IU5-13|13Io002|     Ivanchenko
-IU5-13|13Kv641|        Komarov
-IU5-13|13Kv170|      Kuznetsov
-IU5-13|13La777|       Lebedeva
-IU5-13|13Lv337|        Lobanov
-IU5-13|13Lv995|       Lukyanov
-IU5-13|13Pv818|      Permyakov
-IU5-13|13Pv662|       Polyakov
-IU5-13|13Pv830|          Popov
-IU5-13|13Rv210|      Rasskazov
-IU5-13|13Pn905|          Pibin
-IU5-13|13Sn874|       Sargsyan
-IU5-13|13Sa153|          Skiba
-IU5-13|13Sv102|        Sokolov
+  IU5-11| 11An471|     Akhmadulin
+  IU5-11| 11Av490|        Ashurov
+  IU5-11| 11Ga288|        Gapeeva
+  IU5-11| 11Hv891|         Hohlov
+  IU5-11| 11Iv554|        Izibaev
+  IU5-11| 11Ka122|      Kurzanova
+  IU5-11| 11Ka324|         Kotova
+  IU5-11| 11Kk251|   Kolomiychuck
+  IU5-11| 11Kv171|        Koibaev
+  IU5-11| 11Ky167|      Koretskiy
+  IU5-11| 11Mn586|       Makridin
+  IU5-11| 11Mv167|       Mikhalev
+  IU5-11| 11Ov298|         Orazov
+  IU5-11| 11Sa114|  Slepchenckova
+  IU5-11| 11Sl332|          Sigal
+  IU5-11| 11Sn134|     Sarckisyan
+  IU5-11| 11Sv597|        Sadirov
+  IU5-11| 11Sv783|      Stroganov
+  IU5-11| 11Ty724|  Tolstolutskiy
+  IU5-11| 11Uy397|      Uspenskiy
+  IU5-12| 12Aa056|     Altsybeeva
+  IU5-12| 12Av682|    Arzamastsev
+  IU5-12| 12Bv420|        Beketov
+  IU5-12| 12Dn983|       Davidyan
+  IU5-12| 12Ev443|         Efimov
+  IU5-12| 12KA694|        KuzminA
+  IU5-12| 12KY873|        KuzminY
+  IU5-12| 12Ka816|      Kirillova
+  IU5-12| 12Kn606|       Kazitsin
+  IU5-12| 12Lo928|         Lyalko
+  IU5-12| 12No531|     Nesterenko
+  IU5-12| 12Pa489|         Popova
+  IU5-12| 12Pv670|     Pustovalov
+  IU5-12| 12Sk245|      Semchonok
+  IU5-12| 12Sv163|       Secretov
+  IU5-12| 12Sv790|      Schepetov
+  IU5-12| 12Vh090|        Volvach
+  IU5-12| 12Vn568|         Vaskin
+  IU5-13| 13Bk273|          Baluk
+  IU5-13| 13Gv756|       Gorkunov
+  IU5-13| 13Io002|     Ivanchenko
+  IU5-13| 13Jv145|       Jurmilov
+  IU5-13| 13Kv170|      Kuznetsov
+  IU5-13| 13Kv641|        Komarov
+  IU5-13| 13La777|       Lebedeva
+  IU5-13| 13Lv337|        Lobanov
+  IU5-13| 13Lv995|       Lukyanov
+  IU5-13| 13Pn905|          Pibin
+  IU5-13| 13Pv662|       Polyakov
+  IU5-13| 13Pv818|      Permyakov
+  IU5-13| 13Pv830|          Popov
+  IU5-13| 13Rv210|      Rasskazov
+  IU5-13| 13Sa153|          Skiba
+  IU5-13| 13Sn874|       Sargsyan
+  IU5-13| 13Sv102|        Sokolov
+  IU5-13| 13Va106|         Valova
