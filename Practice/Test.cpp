@@ -1,71 +1,10 @@
 ﻿#include "practice.h"
 
-//void testing() {
-//	//DBTableTxt5 db;
-//	//db.ReadDBTable5(path + "IU5-11.txt");
-//	//Header header = db.GetHeader();
-//
-//	/*for (Header::iterator iter = header.begin(); iter != header.end(); ++iter)
-//	{
-//		cout << iter->second.colName << " " << iter->second.colType << " " << iter->second.length << endl;
-//	}*/
-//	//db.PrintTable5(SCREEN_WIDTH);
-//
-//	DBTableSet5 DB(DBNAME);
-//	DB.ReadDB5();
-//	//DB.PrintDB5(SCREEN_WIDTH);
-//}
-
 void test()
 {
 	practice::Student stud;
 
 	stud.GetName();
-}
-
-void StudentMethodsTest()
-{
-	map<string, size_t> marks;
-	pair<string, size_t> mark;
-	mark.first= "math";
-	mark.second = 4;
-	marks.insert(mark);
-	mark.first = "nachert";
-	mark.second = 5;
-	marks.insert(mark);
-	practice::Student student1("IU5-11", "Mikhail", "ffffff");
-	//student1.PrintStudentInfo();
-	
-	student1.AddMark({ "inzh", 4 });
-	student1.PrintStudentInfo();
-
-	//student1.SetId(2);
-	//student1.PrintStudentInfo();
-
-	/*student1.SetName("Fyodor");
-	student1.PrintStudentInfo();*/
-}
-
-void GroupsMethodsTest()
-{
-	practice::Group group1;
-	vector<practice::Student> studentsList;
-	group1.SetGroupName("IU7-22");
-	for (size_t i = 1; i < 4; i++)
-	{
-		practice::Student student;
-		map<string, size_t> marks;
-		pair<string, size_t> mark;
-		mark.first = "math";
-		mark.second = 4;
-		marks.insert(mark);
-		//student.SetId(i);
-		student.SetName(to_string(i) + " Name");
-		//student.SetMarks(marks);
-		group1.AddStudent(student);
-	}
-
-	group1.PrintGroup();
 }
 
 practice::Group findStudent(string ID, map<string, practice::Group> groups)
@@ -106,27 +45,6 @@ int menu()
 	return choice;
 }
 
-//int changeStudentMenu()
-//{
-//	cout << "======== Изменение данных пользователя =========" << endl
-//		<< "\t1 - Напечатать информацию о студенте" << endl
-//		<< "\t2 - Изменить фамилию студента" << endl
-//		<< "\t3 - Перевести студента в другую группу" << endl
-//		<< "\t4 - Перезаполнить список оценок студента" << endl
-//		<< "\t10 - Выход" << endl;
-//		
-//	int choice;
-//	cout << "Выберите действие\n";
-//	cin >> choice;
-//	while (cin.fail()) {
-//		cout << "Ошибка ввода. Повторите ввод\n";
-//		cin.clear();
-//		cin.ignore(10, '\n');
-//		cin >> choice;
-//	}
-//	return choice;
-//}
-
 void printGroups(map<string, practice::Group> groups)
 {
 	for (auto group : groups)
@@ -140,6 +58,8 @@ void writeGroups(map<string, practice::Group> groups)
 	{
 		group.second.WriteGroupToFile();
 	}
+
+	cout << "======== Запись в файл завершена =========" << endl;
 }
 
 void WriteDB(DBTableSet5& DB, map<string, practice::Group> groups)
@@ -174,6 +94,8 @@ void WriteDB(DBTableSet5& DB, map<string, practice::Group> groups)
  			}
 		}
 	}
+
+	cout << "======== Запись в файл завершена =========" << endl;
 }
 
 void registerNewUser(map<string, practice::Group>& groups)
@@ -218,72 +140,13 @@ void registerNewUser(map<string, practice::Group>& groups)
 	{
 		groups[groupName].AddStudent(student);
 	}
-}
 
-//void changeStudentData(map<string, practice::Group>& groups)
-//{
-//	practice::Student tmpStudent;
-//	string studentID;
-//	string inputString;
-//	int inputNum;
-//
-//	map<string, size_t> marks;
-//	pair<string, size_t> mark;
-//
-//	cout << "Введите ID студента: "; cin >> studentID;
-//	practice::Group group = findStudent(studentID, groups);
-//	while (true)
-//	{
-//		switch (changeStudentMenu())
-//		{
-//		case 1:
-//			group[studentID].PrintStudentInfo();
-//			break;
-//		case 2: /*Изменение имени студента*/
-//			cout << "Введите новое имя студента: "; cin >> inputString;
-//			group[studentID].SetName(inputString);
-//			group.UpdateStudent(group[studentID], inputString);
-//			group[studentID].PrintStudentInfo();
-//			break;
-//		case 3: /*Изменение номера группы студента*/
-//			cout << "Введите новый номер группы студента: "; cin >> inputString;
-//			tmpStudent = group[studentID];
-//			tmpStudent.SetGroupName(inputString);
-//			//group.UpdateStudent(tmpStudent, tmpStudent.GetName());
-//			group.DeleteStudent(studentID);
-//			groups[inputString].AddStudent(tmpStudent);
-//			groups[inputString][studentID].PrintStudentInfo();
-//			return;
-//		case 4: /*Изменение списка оценок*/
-//			do
-//			{
-//				cout << "Введите название предмета (. - отмена): "; cin >> mark.first;
-//				if (mark.first != ".")
-//				{
-//					cout << "Введите оценку: "; cin >> mark.second;
-//					marks.insert(mark);
-//				}
-//			} while (mark.first != ".");
-//			//tmpStudent = group[studentID];
-//			tmpStudent = {group[studentID].GetGroupName(), group[studentID].GetName(), studentID, marks};
-//			//tmpStudent.SetMarks(marks);
-//			group.DeleteStudent(studentID);
-//			group.AddStudent(tmpStudent);
-//			//group.UpdateStudent(tmpStudent, tmpStudent.GetName());
-//			//group[studentID].SetMarks(marks);
-//
-//			group[studentID].PrintStudentInfo();
-//			break;
-//		case 10:
-//			return;
-//		default:
-//			break;
-//		}
-//	}
-//}
+	cout << "========= Успешная регистрация ===========" << endl;
+}
 
 void deleteStudentFromTable(map<string, practice::Group>& groups)
 {
+	printGroups(groups);
 	string ID;
 	cout << "Введите ID студента: "; cin >> ID;
 	practice::Group group = findStudent(ID, groups);
@@ -291,10 +154,12 @@ void deleteStudentFromTable(map<string, practice::Group>& groups)
 	groups.erase(group.GetGroupName());
 	groups.insert({ group.GetGroupName(), group });
 	cout << "========Студент удалён=======" << endl;
+	printGroups(groups);
 }
 
 void printStudentInfo(map<string, practice::Group> groups)
 {
+	printGroups(groups);
 	string ID;
 	cout << "Введите ID студента: "; cin >> ID;
 	practice::Group group = findStudent(ID, groups);
@@ -303,7 +168,6 @@ void printStudentInfo(map<string, practice::Group> groups)
 
 int main()
 {
-	//setlocale(LC_ALL, "rus");
 	system("chcp 1251>nul");
 
 	DBTableSet5 DB(DBNAME);
@@ -318,7 +182,7 @@ int main()
 	{
 		switch (menu())
 		{
-		case 1: /*Чтение БД из файла*/
+		case 1:
 			DB.ReadDB5();
 			tmpGroups = groups;
 			groups = practice::getGroups(DB);
@@ -326,34 +190,27 @@ int main()
 			{
 				groups.insert(tmp);
 			}
-			cout << groups.size() << endl;
 			cout << "========== Считывание завершено ==========" << endl;
 			break;
-		case 2: /*Печать БД*/
+		case 2:
 			DB.PrintDB5(SCREEN_WIDTH);
 			break;
-		case 3: /*Печать сгруппированных таблиц*/
+		case 3:
 			printGroups(groups);
 			break;
-		case 4: /*Запись БД в файл*/
+		case 4:
 			WriteDB(DB, groups);
-			cout << "======== Запись в файл завершена =========" << endl;
 			break;
-		case 5: /*Запись сгруппированных таблиц в файлы*/
+		case 5:
 			writeGroups(groups);
-			cout << "======== Запись в файл завершена =========" << endl;
 			break;
-		case 6: /*Зарегистрировать студента*/
+		case 6:
 			registerNewUser(groups);
-			cout << "========= Успешная регистрация ===========" << endl;
 			break;
-		case 7: /*Удалить студента из таблицы*/
-			printGroups(groups);
+		case 7:
 			deleteStudentFromTable(groups);
-			printGroups(groups);
 			break;
-		case 8: /*Печать информации о студенте*/
-			printGroups(groups);
+		case 8:
 			printStudentInfo(groups);
 			break;
 		case 9:
@@ -372,11 +229,6 @@ int main()
 			break;
 		}
 	}
-	
-
-	
-	//DB.ReadDB5();
-	//map<string, practice::Group> groups = practice::getGroups(DB);
 
 	system("pause");
 	return 0;

@@ -2,23 +2,6 @@
 #define PRACTICE_H
 #include "dbmslib5.h"
 
-//TODO
-//5.1.1.Создание таблиц в базе данных для соответствующих групп кафедры ИУ5. DONE
-//5.1.2.Добавление новых студентов в таблицы, с данными о текущей успеваемости и без данных. DONE
-//5.1.3.Добавление данных о студенте в таблицу. DONE
-//5.1.4.Изменение данных студента в таблице. DONE
-//5.1.5.Удаление данных о студенте из таблицы. DONE
-//5.1.6.Удаление студентов из таблицы. DONE
-//5.1.7.Печать информации о студенте по его номеру в таблице. DONE
-//5.1.8.Печать таблицы базы данных. DONE
-//5.1.9.Удаление таблицы из базы данных. DONE
-//5.1.10.Определение среднего балла группы по всем предметам. DONE.
-//5.1.11.Определение лучшей группы кафедры по среднему баллу каждой группы. DONE.
-//5.1.12.Определение дисциплины, по которой студенты группы имеют наименьший средний балл. DONE.
-//5.1.13.Печать базы данных. DONE.
-
-
-
 const string DBNAME = "PracticeDBtxt";
 const int NAME_FIELD_LENGTH = 15;
 const int SCREEN_WIDTH = 80;
@@ -37,7 +20,6 @@ namespace practice {
 		dbmsLib5::DBType type;
 		size_t length;
 	};
-	//map<string, Discipline> disciplines;
 
 	class Student {
 	private:
@@ -97,17 +79,10 @@ namespace practice {
 		void WriteGroupToFile();
 	};
 
-	vector<practice::Group> getGroups1(DBTableSet5& DB);
-	map<string, practice::Group> getGroups2(DBTableSet5& DB);
 	map<string, practice::Group> getGroups(DBTableSet5& DB);
 	string V17(DBTableSet5& DB);
 	string V16(map<string, practice::Group> Groups);
-	string deleteSpaces(string str);
-
-
-	
-
-	
+	string deleteSpaces(string str);	
 }
 
 #endif // !PRACTICE_H

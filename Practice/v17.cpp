@@ -8,7 +8,6 @@ string practice::V17(DBTableSet5& DB) {
 
 	practice::Group myGroup = groups["IU5-12"];
 
-	//cout << myGroup.GetGroupName() << endl;
 	map<string, size_t> totalDiscipleScore;
 
 	for (auto student : myGroup.GetStudentsList())
