@@ -127,10 +127,10 @@ namespace practice {
 	}
 	void Student::PrintStudentInfo()
 	{
-		if (!(this->studentId_.size() && this->name_.size() && this->marks_.size())) {
+		/*if (!(this->studentId_.size() && this->name_.size() && this->marks_.size())) {
 			cout << "Student::PrintStudentInfo()" << endl;
 			exit(EMPTY_CLASS_FIELD);
-		}
+		}*/
 		cout << "-----------------" << endl;
 		cout << "ID : " << this->GetId() << endl;
 		cout << "Name : " << this->GetName() << endl;
@@ -250,7 +250,7 @@ namespace practice {
 	{
 		if (!this->groupName_.size())
 		{
-			exit(NOTHING_TO_PRINT);
+			return;
 		}
 		cout << "Group : " << this->GetGroupName() << endl;
 		cout << "Amount of students : " << this->GetAmountOfStudents() << endl;

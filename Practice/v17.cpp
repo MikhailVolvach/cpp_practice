@@ -33,7 +33,7 @@ string practice::V17(DBTableSet5& DB) {
 		}
 	}
 
-	cout << "Minimum (" << minimum.second << ") : " << minimum.first << endl;
+	cout << "Дисциплина с наименьшим средним баллом во второй группе кафедры ИУ5: " << minimum.first << endl;
 
 	return minimum.first;
 }

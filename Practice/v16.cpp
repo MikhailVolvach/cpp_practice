@@ -62,7 +62,7 @@ string practice::V16(map<string, practice::Group> Groups) {
 			maxScore.second = GroupAndScore["IU5-1" + to_string(i)];
 		}
 	}
-
-	cout << maxScore.first << " : " << maxScore.second << endl;
+	maxScore.second /= Groups[maxScore.first].GetAmountOfStudents();
+	cout << "Лучшая группа кафедры ИУ5: " << maxScore.first << endl;
 	return maxScore.first;
 }
